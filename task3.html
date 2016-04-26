@@ -5,19 +5,19 @@
     <title>task3</title>
 </head>
 <body>
-<form method="get" action="http://yandex.ru" name="form">
+<form enctype="multipart/form-data" method="get" action="http://yandex.ru" name="form">
 <label>Name<br />
-<input type="text" name="name" value="Name" autofocus="focus"></label><br /><br />
+<input type="text" name="name" placeholder="Твое имя" autofocus="focus"></label><br /><br />
 <label>Email<br />
-<input type="email" name="email" value="example.com"></label><br /><br />
+<input type="email" name="email" placeholder="1@ya.ru"></label><br /><br />
 Sex<br />
 <input type="radio" name="sex" value="Male" checked>Male
 <input type="radio" name="sex" value="Female">Female
 <br /><br />
 Current status<br />
-    <input type="checkbox" value="student" checked>Student<br />
-    <input type="checkbox" value="employed">Employed<br />
-    <input type="checkbox" value="unemployed">Unemployed<br />
+    <input type="checkbox" value="student" name="status" checked>Student<br />
+    <input type="checkbox" value="employed" name="status">Employed<br />
+    <input type="checkbox" value="unemployed" name="status">Unemployed<br />
 <br />
 Month and year of birth<br />
 <select name="month" id="mon">
@@ -32,6 +32,31 @@ Month and year of birth<br />
     <option value="1990">1990</option>
     <option value="1991">1991</option>
 </select>
+<br /><br />
+Skills and Technologies<br />
+<select size="10" name="skills" required >
+<optgroup label="Tech skills">
+    <option value="HTML">HTML</option>
+    <option value="CSS" selected>CSS</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="git">git</option>
+</optgroup>
+<optgroup label="Soft skills">
+    <option value="Time management">Time management</option>
+    <option value="Proactivity">Proactivity</option>
+    <option value="Teamwork">Teamwork</option>
+    <option value="Leadership">Leadership</option>
+</optgroup>
+</select><br /><br />
+Photo<br />
+<input type="file"><br /><br />
+Comments<br />
+<textarea rows="4" name="comments">
+
+
+</textarea><br /><br />
+<input type="submit" value="Save">
+<input type="reset" value="Reset">
 </form>
 
 </body>
